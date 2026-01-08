@@ -29,13 +29,14 @@ book amul taza milk 500 ml
 
 
 ### Output
-```json
+json
 {
   "product": "Amul Taza Milk",
   "variant": "taza",
   "quantity": ["500"],
   "unit": ["ml"]
 }
+
 🏗 Architecture Overview
 High-Level Flow
 
