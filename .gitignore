@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual env
+myenv/
+.env
+
+# spaCy trained model
+model/
+
+# OS
+.DS_Store
+Thumbs.db
