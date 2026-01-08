@@ -29,17 +29,19 @@ book amul taza milk 500 ml
 
 
 ### Output
-json
+```json
 {
   "product": "Amul Taza Milk",
   "variant": "taza",
   "quantity": ["500"],
   "unit": ["ml"]
 }
+```
 
-🏗 Architecture Overview
+---
+## 🏗 Architecture Overview
 High-Level Flow
-
+```mermaid
 flowchart TD
     A[User / Voice Input] --> B[Text Preprocessing]
     B --> C[spaCy NER Model]
@@ -48,7 +50,8 @@ flowchart TD
     E --> F[Quantity & Unit Extraction]
     F --> G[Variant Inference]
     G --> H[Structured Output]
-Design Principles
+```
+## Design Principles
 Machine Learning (spaCy NER)
 Used only for product name detection to allow generalization
 
@@ -58,8 +61,8 @@ Used for quantities and units for deterministic accuracy
 Keyword-based logic
 Used for variant inference to match business rules
 
-📁 Project Structure
-
+## 📁 Project Structure
+```graphql
 amul-sku-nlp/
 │
 ├── src/                # Core NLP logic & training code
@@ -67,8 +70,9 @@ amul-sku-nlp/
 ├── model/              # Trained spaCy model (generated, not committed)
 ├── requirements.txt
 └── README.md
+```
 
-⚙️ Setup & Usage
+## ⚙️ Setup & Usage
 
 1️⃣ Install dependencies
 
@@ -82,7 +86,7 @@ python src/train.py
 
 python -m examples.demo
 
-📌 Use Cases
+## 📌 Use Cases
 🎙 Voice-based ordering systems
 
 📱 Distributor & retailer mobile apps
@@ -91,7 +95,7 @@ python -m examples.demo
 
 🤖 Chatbots & WhatsApp ordering
 
-📝 Notes
+## 📝 Notes
 Train once, reuse across multiple applications
 
 Trained model files are intentionally excluded from Git
@@ -106,7 +110,7 @@ Additional units
 
 Other FMCG brands
 
-🚧 Future Enhancements
+## 🚧 Future Enhancements
 Multi-brand SKU extraction
 
 Quantity–unit pairing (e.g., 500 ml × 10)
@@ -117,16 +121,15 @@ Multilingual support
 
 Confidence scoring for entities
 
-✅ Tech Stack
+## ✅ Tech Stack
 Python 3.x
 
 spaCy
 
 Regex & Rule-based NLP
 
-📄 License
+## 📄 License
 This project is intended for internal / educational / POC use.
-Add a license file if required.
 
 
 ### ✅ What this README gives you
